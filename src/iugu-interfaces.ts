@@ -1,5 +1,5 @@
 export interface Customer {
-   id?:string
+   id:string
    email: string;
    name: string;
 }
@@ -20,5 +20,4 @@ export interface Subscription {
    price_cents?: number;
    credits_cycle?:number;
    credits_min?:number;
-
 }

@@ -58,5 +58,17 @@ class RestClient {
             headers: this.$getHeader()
         });
     }
+    /**
+     *
+     * @param {T} t
+     * @returns {Promise<any>}
+     */
+    update(id, t) {
+        return rp.put(this.$getUri() + id, {
+            body: t,
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
 }
 exports.RestClient = RestClient;

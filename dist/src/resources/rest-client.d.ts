@@ -39,4 +39,10 @@ export declare abstract class RestClient<T> implements IRest {
      * @returns {Promise<T>}
      */
     delete(id: string): Promise<T>;
+    /**
+     *
+     * @param {T} t
+     * @returns {Promise<any>}
+     */
+    update(id: string, t: T): Promise<any>;
 }
