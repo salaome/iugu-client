@@ -75,7 +75,7 @@ export abstract class RestClient<T> implements IRest {
     * @param {T} t
     * @returns {Promise<any>}
     */
-   update(id:string, t: T):Promise<any> {
+   update(id:string | undefined, t: T):Promise<any> {
       return rp.put(this.$getUri()+id, {
          body: t,
          json: true,

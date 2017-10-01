@@ -14,7 +14,6 @@ describe('Customer specs', () => {
    it('should create, get , update and delete a new customer', function() {
       this.timeout(5000);
       return iugu.customer.create({
-         id: '',
          email: "name@test.com",
          name: "user test"
       })

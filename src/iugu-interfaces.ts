@@ -1,7 +1,7 @@
 export interface Customer {
-   id:string
-   email: string;
-   name: string;
+   id?:string
+   email?: string;
+   name?: string;
 }
 
 export interface PaymentMethod {
