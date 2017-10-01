@@ -6,12 +6,11 @@ const iugu_1 = require("../src/iugu");
 describe('Customer specs', () => {
     let iugu;
     before(function () {
-        iugu = new iugu_1.Iugu('7b39d6d2bcafc22abe9b6d519994929a');
+        iugu = new iugu_1.Iugu('');
     });
     it('should create, get , update and delete a new customer', function () {
         this.timeout(5000);
         return iugu.customer.create({
-            id: '',
             email: "name@test.com",
             name: "user test"
         })
@@ -31,6 +30,7 @@ describe('Customer specs', () => {
             .then((customer) => {
             chai_1.expect(customer).to.exist;
             chai_1.expect(customer.email).to.equal('name2@test.com');
+            chai_1.expect(customer.name).to.equal('user test');
             customer.email;
             return customer;
         })

@@ -1,7 +1,7 @@
 /// <reference types="request" />
 import { IRest } from "./iresources";
 import { Headers } from "request";
-export declare abstract class RestClient<T> implements IRest {
+export declare abstract class RestClient<T> implements IRest<T> {
     /**
      * Path
      */
@@ -26,7 +26,7 @@ export declare abstract class RestClient<T> implements IRest {
      * @param {T} t
      * @returns {Promise<any>}
      */
-    create(t: T): Promise<any>;
+    create(t: T): Promise<T>;
     /**
      *
      * @param {string} id
@@ -44,5 +44,5 @@ export declare abstract class RestClient<T> implements IRest {
      * @param {T} t
      * @returns {Promise<any>}
      */
-    update(id: string, t: T): Promise<any>;
+    update(id: string | undefined, t: T): Promise<T>;
 }

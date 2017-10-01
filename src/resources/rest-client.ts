@@ -2,7 +2,7 @@ import {IRest} from "./iresources";
 import {Headers} from "request";
 import * as rp from "request-promise-native";
 
-export abstract class RestClient<T> implements IRest {
+export abstract class RestClient<T> implements IRest<T> {
 
    /**
     * Path
@@ -37,9 +37,9 @@ export abstract class RestClient<T> implements IRest {
    /**
     *
     * @param {T} t
-    * @returns {Promise<any>}
+    * @returns {Promise<T>}
     */
-   create(t: T):Promise<any> {
+   create(t: T):Promise<T> {
       return rp.post(this.$getUri(), {
          body: t,
          json: true,
@@ -73,9 +73,9 @@ export abstract class RestClient<T> implements IRest {
    /**
     *
     * @param {T} t
-    * @returns {Promise<any>}
+    * @returns {Promise<T>}
     */
-   update(id:string | undefined, t: T):Promise<any> {
+   update(id:string | undefined, t: T):Promise<T> {
       return rp.put(this.$getUri()+id, {
          body: t,
          json: true,
