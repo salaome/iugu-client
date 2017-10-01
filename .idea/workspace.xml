@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cf23b60d-0f45-4d6f-baa6-a125513e7154" name="Default" comment="Add optionality to customer attributes">
+    <list default="true" id="cf23b60d-0f45-4d6f-baa6-a125513e7154" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/iugu-client.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/preferred-vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/src/iugu-interfaces.d.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/src/iugu-interfaces.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/src/iugu.d.ts" afterPath="" />
@@ -18,15 +22,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/src/resources/subscription-resource.js" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/test/iugu.spec.d.ts" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/dist/test/iugu.spec.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/test/resources/Custumer.spec.d.ts" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/test/resources/Custumer.spec.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/iresources.ts" afterPath="$PROJECT_DIR$/src/resources/iresources.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/resources/rest-client.ts" afterPath="$PROJECT_DIR$/src/resources/rest-client.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="$PROJECT_DIR$/tsconfig.json" />
     </list>
     <ignored path="$PROJECT_DIR$/node_modules/" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -67,8 +62,8 @@
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+            <state relative-caret-position="202">
+              <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -226,11 +221,6 @@
               <item name="Root" type="cbb8eebc:String" user="Root" />
               <item name="iugu-client" type="cbb8eebc:String" user="iugu-client" />
             </path>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="iugu-client" type="cbb8eebc:String" user="iugu-client" />
-              <item name="dist" type="cbb8eebc:String" user="dist" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -295,7 +285,7 @@
       <workItem from="1504537256726" duration="98000" />
       <workItem from="1506869728084" duration="2650000" />
       <workItem from="1506872504346" duration="691000" />
-      <workItem from="1506874436757" duration="8157000" />
+      <workItem from="1506874436757" duration="8306000" />
     </task>
     <task id="LOCAL-00001" summary="Add Customer Update">
       <created>1506872030039</created>
@@ -318,11 +308,18 @@
       <option name="project" value="LOCAL" />
       <updated>1506873150745</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Ajusting package">
+      <created>1506891227886</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1506891227886</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38446000" />
+    <option name="totallyTimeSpent" value="38595000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1985" y="-4" width="1855" height="1084" extended-state="6" />
@@ -362,7 +359,8 @@
     <MESSAGE value="Add Customer Update" />
     <MESSAGE value="remove ignored file" />
     <MESSAGE value="Add optionality to customer attributes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add optionality to customer attributes" />
+    <MESSAGE value="Ajusting package" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajusting package" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -609,9 +607,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#61#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -645,13 +641,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="11" lean-forward="true" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding>
-            <marker date="1506890877893" expanded="true" signature="235:717" ph="{...}" />
-            <marker date="1506890877893" expanded="true" signature="260:323" ph="{...}" />
-            <marker date="1506890877893" expanded="true" signature="328:483" ph="/** Create a custumer payment method ...*/" />
-            <marker date="1506890877893" expanded="true" signature="530:715" ph="{...}" />
-            <marker date="1506890877893" expanded="true" signature="606:707" ph="{&quot;body&quot;: payment...}" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -701,8 +691,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        <state relative-caret-position="202">
+          <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
           <folding />
         </state>
       </provider>
