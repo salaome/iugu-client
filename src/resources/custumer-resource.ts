@@ -27,4 +27,11 @@ export class CustomerResource extends IuguResouces<Customer> {
       });
    }
 
+   removePaymentMethod(customer_id:string, payment_method_id: string){
+       return rp.delete(`${this.$getUri()}${customer_id}/payment_methods/${payment_method_id}`, {
+           json: true,
+           headers: this.$getHeader()
+       });
+   }
+
 }
