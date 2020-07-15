@@ -1,6 +1,6 @@
 {
   "name": "iugu-client",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "It is Iugu client to typescript projects.",
   "main": "dist/src/iugu.js",
   "typings": "dist/src/iugu",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/icastilho/iugu-client.git"
+    "url": "git+https://github.com/salaome/iugu-client.git"
   },
   "keywords": [
     "rest-client",
@@ -25,9 +25,9 @@
   "author": "icastilho@craftcode.com.br",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/icastilho/iugu-client/issues"
+    "url": "https://github.com/salaome/iugu-client/issues"
   },
-  "homepage": "https://github.com/icastilho/iugu-client#readme",
+  "homepage": "https://github.com/salaome/iugu-client#readme",
   "devDependencies": {
     "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
@@ -42,5 +42,8 @@
     "@types/request-promise-native": "^1.0.7",
     "request": "^2.87.0",
     "request-promise-native": "^1.0.5"
+  },
+  "directories": {
+    "test": "test"
   }
 }

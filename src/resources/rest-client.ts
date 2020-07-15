@@ -7,7 +7,7 @@ export abstract class RestClient<T> implements IRest<T> {
    /**
     * Path
     */
-   path:string;
+   path: string | undefined;
 
    /**
     * Base Url

@@ -4,9 +4,9 @@ import {RestClient} from "./rest-client";
 
 export abstract class IuguResouces<T> extends RestClient<T>{
 
-   token:string;
+   token:string | undefined;
 
-   constructor(token: string){
+   constructor(token: string | undefined){
       super();
       this.token = token;
    }
@@ -16,7 +16,7 @@ export abstract class IuguResouces<T> extends RestClient<T>{
     * @returns {string}
     */
    protected $getToken() :string{
-     return this.token;
+     return <string>this.token;
    }
 
    /**

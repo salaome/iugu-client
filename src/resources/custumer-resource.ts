@@ -9,7 +9,7 @@ import * as rp from "request-promise-native";
 export class CustomerResource extends IuguResouces<Customer> {
    path: string = 'customers/';
 
-   constructor(token: string){
+    constructor(token: string | undefined){
       super(token);
    }
 

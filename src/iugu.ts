@@ -1,11 +1,9 @@
-
-
 import {CustomerResource} from "./resources/custumer-resource";
 import {SubscriptionResource} from "./resources/subscription-resource";
 
 export class Iugu {
 
-   private token:string;
+   private token: string | undefined;
 
    customer: CustomerResource;
    subscription: SubscriptionResource;
