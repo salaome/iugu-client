@@ -2,8 +2,8 @@
 import { Headers } from "request";
 import { RestClient } from "./rest-client";
 export declare abstract class IuguResouces<T> extends RestClient<T> {
-    token: string;
-    constructor(token: string);
+    token: string | undefined;
+    constructor(token: string | undefined);
     /**
      *
      * @returns {string}

@@ -26,5 +26,11 @@ class CustomerResource extends iugu_resouces_1.IuguResouces {
             headers: this.$getHeader()
         });
     }
+    getByEmail(email) {
+        return rp.get(`${this.$getUri()}/payment_methods`, {
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
 }
 exports.CustomerResource = CustomerResource;
