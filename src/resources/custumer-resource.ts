@@ -27,6 +27,33 @@ export class CustomerResource extends IuguResouces<Customer> {
         });
     }
 
+    paymentMethods(customer_id: string): Promise<any> {
+        return rp.get(`${this.$getUri()}${customer_id}/payment_methods`, {
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
+
+    paymentMethod(customer_id: string, peyment_id: string): Promise<any> {
+        return rp.get(`${this.$getUri()}${customer_id}/payment_methods/${peyment_id}`, {
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
+    deletePaymentMethod(customer_id: string, peyment_id: string): Promise<any> {
+        return rp.delete(`${this.$getUri()}${customer_id}/payment_methods/${peyment_id}`, {
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
+
+    switchPaymentMethod(customer_id: string, peyment_id: string): Promise<any> {
+        return rp.put(`${this.$getUri()}${customer_id}/payment_methods/${peyment_id}`, {
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
+
     removePaymentMethod(customer_id: string, payment_method_id: string) {
         return rp.delete(`${this.$getUri()}${customer_id}/payment_methods/${payment_method_id}`, {
             json: true,
