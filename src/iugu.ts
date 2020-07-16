@@ -18,8 +18,8 @@ export class Iugu {
 
     paymentToken(accountId: string, test: boolean, number: string, verificationValue: string, firstName: string,
                  lastName: string, month: string, year: string) {
-        return rp.post(`${this.subscription.baseUrl}/payment_token`, {
-            headers: this.subscription.$getHeader(),
+        return rp.post(`${this.subscription.baseUrl}payment_token`, {
+            headers: {'Content-Type': 'application/json'},
             json: true,
             body: {
                 account_id: accountId,
