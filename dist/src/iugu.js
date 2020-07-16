@@ -10,8 +10,8 @@ class Iugu {
         this.subscription = new subscription_resource_1.SubscriptionResource(this.token);
     }
     paymentToken(accountId, test, number, verificationValue, firstName, lastName, month, year) {
-        return rp.post(`${this.subscription.baseUrl}/payment_token`, {
-            headers: this.subscription.$getHeader(),
+        return rp.post(`${this.subscription.baseUrl}payment_token`, {
+            headers: { 'Content-Type': 'application/json' },
             json: true,
             body: {
                 account_id: accountId,
