@@ -16,7 +16,7 @@ class Iugu {
             body: {
                 account_id: accountId,
                 method: 'credit_card',
-                test,
+                test: test,
                 data: {
                     number,
                     verification_value: verificationValue,
