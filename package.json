@@ -1,6 +1,6 @@
 {
   "name": "iugu-client",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "It is Iugu client to typescript projects.",
   "main": "dist/src/iugu.js",
   "typings": "dist/src/iugu",

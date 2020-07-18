@@ -52,7 +52,7 @@ export class Iugu {
             ]
         }
 
-        if (true) {
+        if (!token) {
             body['method'] = 'bank_slip';
             body['restrict_payment_method'] = true;
             body['bank_slip_extra_days'] = 30;
