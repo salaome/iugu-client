@@ -60,7 +60,7 @@ export class Iugu {
         }
 
         return rp.post(`${this.subscription.baseUrl}charge`, {
-            headers: {'Content-Type': 'application/json'},
+            headers: this.customer.$getHeader(),
             json: true,
             body: body
         });

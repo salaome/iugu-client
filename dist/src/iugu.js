@@ -49,7 +49,7 @@ class Iugu {
             body['payer'] = payer;
         }
         return rp.post(`${this.subscription.baseUrl}charge`, {
-            headers: { 'Content-Type': 'application/json' },
+            headers: this.customer.$getHeader(),
             json: true,
             body: body
         });
