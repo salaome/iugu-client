@@ -45,7 +45,7 @@ export class Iugu {
             order_id: orderId,
             items: [
                 {
-                    description: '',
+                    description: 'Fatura Salao.Me',
                     quantity: 1,
                     price_cents: price
                 }
