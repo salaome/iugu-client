@@ -18,4 +18,5 @@ export declare class CustomerResource extends IuguResouces<Customer> {
     switchPaymentMethod(customer_id: string, payment_id: string): Promise<any>;
     removePaymentMethod(customer_id: string, payment_method_id: string): rp.RequestPromise;
     getByEmail(email: string): rp.RequestPromise;
+    invoices(customer_id: string): rp.RequestPromise;
 }

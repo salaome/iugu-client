@@ -67,6 +67,13 @@ export class Iugu {
 
     }
 
+    invoices(invoice_id: string) {
+        return rp.get(`${this.customer.baseUrl}invoices/${invoice_id}`, {
+            json: true,
+            headers: this.customer.$getHeader()
+        });
+    }
+
     /**
      *
      * @param {string} apiKey

@@ -69,4 +69,11 @@ export class CustomerResource extends IuguResouces<Customer> {
         });
     }
 
+    invoices(customer_id: string) {
+        return rp.get(`${this.baseUrl}invoices?customer_id=${customer_id}`, {
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
+
 }

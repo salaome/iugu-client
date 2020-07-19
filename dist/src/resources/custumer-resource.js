@@ -56,5 +56,11 @@ class CustomerResource extends iugu_resouces_1.IuguResouces {
             headers: this.$getHeader()
         });
     }
+    invoices(customer_id) {
+        return rp.get(`${this.baseUrl}invoices?customer_id=${customer_id}`, {
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
 }
 exports.CustomerResource = CustomerResource;

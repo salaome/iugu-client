@@ -54,6 +54,12 @@ class Iugu {
             body: body
         });
     }
+    invoices(invoice_id) {
+        return rp.get(`${this.customer.baseUrl}invoices/${invoice_id}`, {
+            json: true,
+            headers: this.customer.$getHeader()
+        });
+    }
     /**
      *
      * @param {string} apiKey
