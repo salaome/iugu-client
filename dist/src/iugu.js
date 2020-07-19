@@ -28,7 +28,7 @@ class Iugu {
             }
         });
     }
-    charge(customerId, token, payer, orderId, price) {
+    charge(customerId, token, payer, orderId, price, description) {
         let body = {
             customer_id: customerId,
             token: token,
@@ -36,7 +36,7 @@ class Iugu {
             order_id: orderId,
             items: [
                 {
-                    description: 'Fatura Salao.Me',
+                    description: description,
                     quantity: 1,
                     price_cents: price
                 }

@@ -8,7 +8,7 @@ export declare class Iugu {
     subscription: SubscriptionResource;
     constructor(apiKey: string);
     paymentToken(accountId: string, test: boolean, number: string, verificationValue: string, firstName: string, lastName: string, month: string, year: string): rp.RequestPromise;
-    charge(customerId: string, token: string, payer: any, orderId: string, price: number): rp.RequestPromise;
+    charge(customerId: string, token: string, payer: any, orderId: string, price: number, description: string): rp.RequestPromise;
     invoices(invoice_id: string): rp.RequestPromise;
     /**
      *

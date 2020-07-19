@@ -37,7 +37,7 @@ export class Iugu {
         });
     }
 
-    charge(customerId: string, token: string, payer: any, orderId: string, price: number) {
+    charge(customerId: string, token: string, payer: any, orderId: string, price: number, description: string) {
         let body: any = {
             customer_id: customerId,
             token: token,
@@ -45,7 +45,7 @@ export class Iugu {
             order_id: orderId,
             items: [
                 {
-                    description: 'Fatura Salao.Me',
+                    description: description,
                     quantity: 1,
                     price_cents: price
                 }
