@@ -26,20 +26,20 @@ class CustomerResource extends iugu_resouces_1.IuguResouces {
             headers: this.$getHeader()
         });
     }
-    paymentMethod(customer_id, peyment_id) {
-        return rp.get(`${this.$getUri()}${customer_id}/payment_methods/${peyment_id}`, {
+    paymentMethod(customer_id, payment_id) {
+        return rp.get(`${this.$getUri()}${customer_id}/payment_methods/${payment_id}`, {
             json: true,
             headers: this.$getHeader()
         });
     }
-    deletePaymentMethod(customer_id, peyment_id) {
-        return rp.delete(`${this.$getUri()}${customer_id}/payment_methods/${peyment_id}`, {
+    deletePaymentMethod(customer_id, payment_id) {
+        return rp.delete(`${this.$getUri()}${customer_id}/payment_methods/${payment_id}`, {
             json: true,
             headers: this.$getHeader()
         });
     }
-    switchPaymentMethod(customer_id, peyment_id) {
-        return rp.put(`${this.$getUri()}${customer_id}/payment_methods/${peyment_id}`, {
+    switchPaymentMethod(customer_id, payment_id) {
+        return rp.put(`${this.$getUri()}${customer_id}/payment_methods/${payment_id}`, {
             json: true,
             headers: this.$getHeader()
         });

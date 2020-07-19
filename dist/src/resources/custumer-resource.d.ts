@@ -13,9 +13,9 @@ export declare class CustomerResource extends IuguResouces<Customer> {
      */
     createPaymentMethod(customer_id: string, payment: PaymentMethod): Promise<any>;
     paymentMethods(customer_id: string): Promise<any>;
-    paymentMethod(customer_id: string, peyment_id: string): Promise<any>;
-    deletePaymentMethod(customer_id: string, peyment_id: string): Promise<any>;
-    switchPaymentMethod(customer_id: string, peyment_id: string): Promise<any>;
+    paymentMethod(customer_id: string, payment_id: string): Promise<any>;
+    deletePaymentMethod(customer_id: string, payment_id: string): Promise<any>;
+    switchPaymentMethod(customer_id: string, payment_id: string): Promise<any>;
     removePaymentMethod(customer_id: string, payment_method_id: string): rp.RequestPromise;
     getByEmail(email: string): rp.RequestPromise;
 }
