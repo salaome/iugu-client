@@ -60,7 +60,7 @@ class Iugu {
             headers: this.customer.$getHeader()
         });
     }
-    createInvoice(customer_id, email, date, description, price, cpf_cnpj, name, zip_code, number) {
+    createInvoice(customer_id, email, date, description, price, cpf_cnpj, name, zip_code, number, payable_with) {
         let body = {
             customer_id: customer_id,
             email: email,
@@ -72,7 +72,7 @@ class Iugu {
                     price_cents: price
                 }
             ],
-            payable_with: 'bank_slip',
+            payable_with: payable_with,
             payer: {
                 cpf_cnpj: cpf_cnpj,
                 name: name,

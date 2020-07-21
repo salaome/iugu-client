@@ -75,7 +75,7 @@ export class Iugu {
     }
 
     createInvoice(customer_id: string, email: string, date: string, description: string, price: number,
-                  cpf_cnpj: string, name: string, zip_code: string, number: string) {
+                  cpf_cnpj: string, name: string, zip_code: string, number: string, payable_with: string) {
 
         let body: any = {
             customer_id: customer_id,
@@ -88,7 +88,7 @@ export class Iugu {
                     price_cents: price
                 }
             ],
-            payable_with: 'bank_slip',
+            payable_with: payable_with,
             payer: {
                 cpf_cnpj: cpf_cnpj,
                 name: name,
