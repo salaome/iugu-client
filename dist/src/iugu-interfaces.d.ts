@@ -2,6 +2,14 @@ export interface Customer {
     id?: string;
     email?: string;
     name?: string;
+    cpf_cnpj?: string;
+    zip_code?: string;
+    number?: string;
+    street?: string;
+    city?: string;
+    state?: string;
+    district?: string;
+    complement?: string;
 }
 export interface PaymentMethod {
     description?: string;
