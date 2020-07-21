@@ -96,7 +96,7 @@ export class CustomerResource extends IuguResouces<Customer> {
                 headers: this.$getHeader()
             });
         } catch (e) {
-            return {e, url: `${this.baseUrl}invoices`};
+            return new Promise((resolve, reject) => resolve({e, url: `${this.baseUrl}invoices`}));
         }
     }
 
