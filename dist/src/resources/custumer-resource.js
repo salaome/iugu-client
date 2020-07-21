@@ -82,7 +82,7 @@ class CustomerResource extends iugu_resouces_1.IuguResouces {
             });
         }
         catch (e) {
-            return null;
+            return e;
         }
     }
 }

@@ -97,7 +97,7 @@ export class CustomerResource extends IuguResouces<Customer> {
                 headers: this.$getHeader()
             });
         } catch (e) {
-            return null;
+            return e;
         }
     }
 
