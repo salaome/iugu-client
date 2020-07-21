@@ -4,6 +4,7 @@ import {
 } from "../iugu-interfaces";
 import {IuguResouces} from "./iugu-resouces";
 import * as rp from "request-promise-native";
+import * as requestPromise from "request-promise-native";
 
 
 export class CustomerResource extends IuguResouces<Customer> {
@@ -96,7 +97,7 @@ export class CustomerResource extends IuguResouces<Customer> {
                 headers: this.$getHeader()
             });
         } catch (e) {
-            return new Promise((resolve, reject) => resolve({e, url: `${this.baseUrl}invoices`}));
+            return null;
         }
     }
 

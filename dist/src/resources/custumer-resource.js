@@ -82,7 +82,7 @@ class CustomerResource extends iugu_resouces_1.IuguResouces {
             });
         }
         catch (e) {
-            return new Promise((resolve, reject) => resolve({ e, url: `${this.baseUrl}invoices` }));
+            return null;
         }
     }
 }
