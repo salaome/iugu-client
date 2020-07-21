@@ -76,4 +76,25 @@ export class CustomerResource extends IuguResouces<Customer> {
         });
     }
 
+    createInvoice(customer: Customer, date: string, description: string, price: number,
+                  payable_with: string = 'bank_slip', payer?: any, expired_url?: string) {
+        return rp.post(`${this.baseUrl}invoices`, {
+            body: {
+                email: customer.email,
+                due_date: date,
+                items: [{
+                    description: description,
+                    quantity: 1,
+                    price_cents: price
+                }],
+                expired_url: expired_url,
+                customer_id: customer.id,
+                payable_with: payable_with,
+                payer: payer
+            },
+            json: true,
+            headers: this.$getHeader()
+        });
+    }
+
 }
