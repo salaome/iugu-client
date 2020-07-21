@@ -62,14 +62,16 @@ class Iugu {
     }
     createInvoice(customer_id, email, date, description, price, cpf_cnpj, name, zip_code, number) {
         let body = {
+            customer_id: customer_id,
             email: email,
             due_date: date,
-            items: [{
+            items: [
+                {
                     description: description,
                     quantity: 1,
                     price_cents: price
-                }],
-            customer_id: customer_id,
+                }
+            ],
             payable_with: 'bank_slip',
             payer: {
                 cpf_cnpj: cpf_cnpj,

@@ -78,14 +78,16 @@ export class Iugu {
                   cpf_cnpj: string, name: string, zip_code: string, number: string) {
 
         let body: any = {
+            customer_id: customer_id,
             email: email,
             due_date: date,
-            items: [{
-                description: description,
-                quantity: 1,
-                price_cents: price
-            }],
-            customer_id: customer_id,
+            items: [
+                {
+                    description: description,
+                    quantity: 1,
+                    price_cents: price
+                }
+            ],
             payable_with: 'bank_slip',
             payer: {
                 cpf_cnpj: cpf_cnpj,
@@ -96,7 +98,7 @@ export class Iugu {
                     number: number
                 }
             }
-        }
+        };
         return rp.post(`${this.subscription.baseUrl}invoices`, {
             headers: this.customer.$getHeader(),
             json: true,
