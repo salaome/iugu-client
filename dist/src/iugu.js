@@ -60,7 +60,7 @@ class Iugu {
             headers: this.customer.$getHeader()
         });
     }
-    createInvoice(customer_id, email, date, description, price, cpf_cnpj, name, zip_code, number, payable_with = 'bank_slip', expired_url) {
+    createInvoice(customer_id, email, date, description, price, cpf_cnpj, name, zip_code, number) {
         let body = {
             email: email,
             due_date: date,
@@ -70,7 +70,7 @@ class Iugu {
                     price_cents: price
                 }],
             customer_id: customer_id,
-            payable_with: payable_with,
+            payable_with: 'bank_slip',
             payer: {
                 cpf_cnpj: cpf_cnpj,
                 name: name,
@@ -81,7 +81,7 @@ class Iugu {
                 }
             }
         };
-        return rp.post(`${this.customer.baseUrl}invoices`, {
+        return rp.post(`${this.subscription.baseUrl}invoices`, {
             headers: this.customer.$getHeader(),
             json: true,
             body: body
