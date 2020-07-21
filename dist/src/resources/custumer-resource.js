@@ -62,7 +62,7 @@ class CustomerResource extends iugu_resouces_1.IuguResouces {
             headers: this.$getHeader()
         });
     }
-    createInvoice(customer_id, email, date, description, price, payer, payable_with = 'bank_slip', expired_url) {
+    createInvoice(customer_id, email, date, description, price, cpf_cnpj, name, zip_code, number, payable_with = 'bank_slip', expired_url) {
         return rp.post(`${this.baseUrl}invoices`, {
             body: {
                 email: email,
@@ -75,12 +75,12 @@ class CustomerResource extends iugu_resouces_1.IuguResouces {
                 customer_id: customer_id,
                 payable_with: payable_with,
                 payer: {
-                    cpf_cnpj: payer.cpf_cnpj,
-                    name: payer.name,
-                    email: payer.email,
+                    cpf_cnpj: cpf_cnpj,
+                    name: name,
+                    email: email,
                     address: {
-                        zip_code: payer.address.zip_code,
-                        number: payer.address.number
+                        zip_code: zip_code,
+                        number: number
                     }
                 }
             },

@@ -78,31 +78,32 @@ export class CustomerResource extends IuguResouces<Customer> {
     }
 
     createInvoice(customer_id: string, email: string, date: string, description: string, price: number,
-                  payer?: any, payable_with: string = 'bank_slip', expired_url?: string) {
-            return rp.post(`${this.baseUrl}invoices`, {
-                body: {
+                  cpf_cnpj: string, name: string, zip_code: string, number: string, payable_with: string = 'bank_slip',
+                  expired_url?: string) {
+        return rp.post(`${this.baseUrl}invoices`, {
+            body: {
+                email: email,
+                due_date: date,
+                items: [{
+                    description: description,
+                    quantity: 1,
+                    price_cents: price
+                }],
+                customer_id: customer_id,
+                payable_with: payable_with,
+                payer: {
+                    cpf_cnpj: cpf_cnpj,
+                    name: name,
                     email: email,
-                    due_date: date,
-                    items: [{
-                        description: description,
-                        quantity: 1,
-                        price_cents: price
-                    }],
-                    customer_id: customer_id,
-                    payable_with: payable_with,
-                    payer: {
-                        cpf_cnpj: payer.cpf_cnpj,
-                        name: payer.name,
-                        email: payer.email,
-                        address: {
-                            zip_code: payer.address.zip_code,
-                            number: payer.address.number
-                        }
+                    address: {
+                        zip_code: zip_code,
+                        number: number
                     }
-                },
-                json: true,
-                headers: this.$getHeader()
-            });
+                }
+            },
+            json: true,
+            headers: this.$getHeader()
+        });
     }
 
 }
