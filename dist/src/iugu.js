@@ -73,16 +73,17 @@ class Iugu {
                 }
             ],
             payable_with: payable_with,
-            payer: {
-                cpf_cnpj: cpf_cnpj,
-                name: name,
-                email: email,
-                address: {
-                    zip_code: zip_code,
-                    number: number
-                }
-            }
+            payer: {}
         };
+        if (zip_code && number && cpf_cnpj) {
+            body.payer['cpf_cnpj'] = cpf_cnpj;
+            body.payer['name'] = name;
+            body.payer['email'] = email;
+            body.payer['address'] = {
+                zip_code: zip_code,
+                number: number
+            };
+        }
         return rp.post(`${this.subscription.baseUrl}invoices`, {
             headers: this.customer.$getHeader(),
             json: true,
