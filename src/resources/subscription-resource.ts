@@ -5,7 +5,7 @@ export class SubscriptionResource extends IuguResouces<Subscription> {
 
    path = 'subscriptions/'
 
-   constructor(token: string) {
+   constructor(token: string | undefined) {
       super(token);
    }
 
