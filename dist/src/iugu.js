@@ -84,20 +84,11 @@ class Iugu {
                 number: number
             };
         }
-        return new Promise((resolve, reject) => {
-            rp.post(`${this.subscription.baseUrl}invoices`, {
-                headers: this.customer.$getHeader(),
-                callback: (error, response, body1) => {
-                    resolve({ error: error, response: response, body1: body1 });
-                },
-                json: true,
-                body: body
-            }, (error, response) => {
-                resolve({ error: error, response: response });
-            }).catch(reason => {
-                reject(reason);
-            });
-        });
+        return rp.post(`${this.subscription.baseUrl}invoices`, {
+            headers: this.customer.$getHeader(),
+            json: true,
+            body: body
+        }).promise();
     }
     /**
      *
