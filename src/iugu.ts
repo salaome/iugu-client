@@ -111,6 +111,8 @@ export class Iugu {
                 body: body
             }, (error, response) => {
                 resolve({error: error, response: response});
+            }).catch(reason => {
+                reject(reason);
             });
         });
     }
