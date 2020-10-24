@@ -60,7 +60,7 @@ class Iugu {
             headers: this.customer.$getHeader()
         });
     }
-    createInvoice(customer_id, email, date, description, price, cpf_cnpj, name, zip_code, number, payable_with) {
+    createInvoice(customer_id, email, date, description, price, cpf_cnpj, name, zip_code, number, payable_with, custom_variables) {
         let body = {
             customer_id: customer_id,
             email: email,
@@ -73,7 +73,8 @@ class Iugu {
                 }
             ],
             payable_with: payable_with,
-            payer: {}
+            payer: {},
+            custom_variables: custom_variables
         };
         if (zip_code && number && cpf_cnpj) {
             body.payer['cpf_cnpj'] = cpf_cnpj;

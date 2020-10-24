@@ -75,7 +75,7 @@ export class Iugu {
     }
 
     createInvoice(customer_id: string, email: string, date: string, description: string, price: number,
-                  cpf_cnpj: string, name: string, zip_code: string, number: string, payable_with: string) {
+                  cpf_cnpj: string, name: string, zip_code: string, number: string, payable_with: string, custom_variables: any[]) {
 
         let body: any = {
             customer_id: customer_id,
@@ -89,7 +89,8 @@ export class Iugu {
                 }
             ],
             payable_with: payable_with,
-            payer: {}
+            payer: {},
+            custom_variables: custom_variables
         };
 
         if (zip_code && number && cpf_cnpj) {
