@@ -37,12 +37,13 @@ export class Iugu {
         });
     }
 
-    charge(customerId: string, token: string, payer: any, orderId: string, price: number, description: string) {
+    charge(customerId: string, token: string, payer: any, orderId: string, price: number, description: string, custom_variables: any[]) {
         let body: any = {
             customer_id: customerId,
             token: token,
             email: payer.email,
             order_id: orderId,
+            custom_variables: custom_variables,
             items: [
                 {
                     description: description,

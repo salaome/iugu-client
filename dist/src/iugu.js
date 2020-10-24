@@ -28,12 +28,13 @@ class Iugu {
             }
         });
     }
-    charge(customerId, token, payer, orderId, price, description) {
+    charge(customerId, token, payer, orderId, price, description, custom_variables) {
         let body = {
             customer_id: customerId,
             token: token,
             email: payer.email,
             order_id: orderId,
+            custom_variables: custom_variables,
             items: [
                 {
                     description: description,
