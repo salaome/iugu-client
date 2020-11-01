@@ -11,6 +11,7 @@ export declare class Iugu {
     charge(customerId: string, token: string, payer: any, orderId: string, price: number, description: string, custom_variables: any[]): rp.RequestPromise;
     invoices(invoice_id: string): rp.RequestPromise;
     createInvoice(customer_id: string, email: string, date: string, description: string, price: number, cpf_cnpj: string, name: string, zip_code: string, number: string, payable_with: string, custom_variables: any[]): Promise<any>;
+    allSubscriptions(start?: number): rp.RequestPromise;
     /**
      *
      * @param {string} apiKey

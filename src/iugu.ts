@@ -110,6 +110,16 @@ export class Iugu {
         }).promise();
     }
 
+    allSubscriptions(start?: number) {
+        let url = `${this.customer.baseUrl}subscriptions?limit=100`;
+        if(start)
+            url += `&start=${start}`;
+        return rp.get(url, {
+            json: true,
+            headers: this.customer.$getHeader()
+        });
+    }
+
     /**
      *
      * @param {string} apiKey
