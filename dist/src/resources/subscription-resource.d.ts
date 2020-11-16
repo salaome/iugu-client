@@ -3,4 +3,5 @@ import { Subscription } from "../iugu-interfaces";
 export declare class SubscriptionResource extends IuguResouces<Subscription> {
     path: string;
     constructor(token: string | undefined);
+    suspend(subscription_id: string): Promise<any>;
 }
